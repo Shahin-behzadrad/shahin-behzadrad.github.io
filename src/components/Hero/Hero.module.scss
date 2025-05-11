@@ -1,0 +1,106 @@
+@import "/src/styles/variables.scss";
+
+.container {
+  position: relative;
+  height: 100dvh;
+  max-width: 1400px;
+  margin-inline: auto;
+  overflow: hidden;
+
+  /* Shape 1 - Decorative Shape */
+  .shape1 {
+    position: absolute;
+    width: 500px;
+    height: 150px;
+    background-color: var(--foreground);
+    bottom: -50px;
+    right: 10%;
+    transform: rotate(20deg);
+    border-radius: 100px;
+    z-index: -3;
+    opacity: 0.2;
+  }
+
+  /* Shape 2 - Another Decorative Shape */
+  .shape2 {
+    position: absolute;
+    width: 500px;
+    height: 150px;
+    background-color: var(--foreground);
+    top: -50px;
+    left: 40%;
+    transform: rotate(30deg);
+    border-radius: 80px;
+    z-index: -3;
+    opacity: 0.2;
+  }
+
+  /* Shape 3 - Another Decorative Shape */
+  .shape3 {
+    position: absolute;
+    width: 500px;
+    height: 150px;
+    background-color: var(--foreground);
+    top: -80px;
+    right: 40%;
+    transform: rotate(-20deg);
+    border-radius: 80px;
+    z-index: -3;
+    opacity: 0.2;
+  }
+
+  /* Glassy Overlay */
+  .glassyLayer {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
+    z-index: -1;
+  }
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .heroContent {
+      width: fit-content;
+      text-wrap: nowrap;
+      margin-top: clamp(16px, 4vw, 64px);
+
+      .myName {
+        font-size: clamp(2rem, 5vw, 10rem);
+
+        .logo {
+          width: clamp(25px, 3vw, 40px);
+          height: auto;
+        }
+      }
+
+      .roleContent {
+        display: flex;
+        justify-content: space-between;
+        margin-left: clamp(35px, 5vw, 45px);
+        align-items: flex-start;
+
+        .roleTitle {
+          font-size: clamp(1rem, 3vw, 1.8rem);
+        }
+      }
+    }
+
+    .myCv {
+      box-shadow: 0 0 5px var(--foreground);
+      @media (max-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+  }
+}

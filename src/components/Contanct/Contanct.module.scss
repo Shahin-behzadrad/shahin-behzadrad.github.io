@@ -1,0 +1,31 @@
+@import "/src/styles/variables.scss";
+
+.container {
+  width: 100%;
+  padding: 40px 0 16px;
+
+  .formContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    max-width: 1000px;
+    column-gap: 16px;
+    padding-inline: 16px;
+    margin-bottom: 32px;
+
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .socialMedia {
+      margin: 24px auto;
+      @media (min-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "/src/styles/variables.scss";
+
+.header {
+  position: fixed;
+  width: 95dvw;
+  max-width: 1400px;
+  left: 0;
+  right: 0;
+  top: 16px;
+  margin-inline: auto;
+  border: 1px solid var(--text-muted);
+  padding: 8px;
+  padding-right: 16px;
+  border-radius: 16px;
+  background-color: rgba($color: #ffffff, $alpha: 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+  }
+  .navbarBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 32px;
+
+    button {
+      color: var(--text-heading);
+    }
+  }
+}

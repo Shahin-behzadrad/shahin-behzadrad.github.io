@@ -1,0 +1,51 @@
+.contactFields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 16px;
+  border-radius: 16px;
+  box-shadow: 0 0 4px var(--primary);
+  padding: 24px;
+  width: 90%;
+
+  flex: 1;
+
+  > :first-child {
+    align-self: flex-start !important;
+  }
+
+  .submitBtn {
+    align-self: flex-end;
+  }
+
+  .submitBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon {
+    margin-left: 8px;
+    display: inline-flex;
+  }
+
+  .spin {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .errorMsg {
+    color: red;
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+}

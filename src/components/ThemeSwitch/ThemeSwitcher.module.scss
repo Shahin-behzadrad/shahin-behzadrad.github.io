@@ -1,0 +1,43 @@
+.themeSwitch {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: var(--secondary);
+  transition: background-color 0.3s ease;
+
+  .themeIcon {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--foreground);
+    color: var(--background);
+    transform: translateX(-15px);
+    transition: transform 0.3s ease-in-out;
+
+    &.isLight {
+      transform: translateX(15px);
+    }
+  }
+
+  .lightThemeIcon {
+    position: absolute;
+    right: 6px;
+    color: #facc15;
+  }
+
+  .darkThemeIcon {
+    position: absolute;
+    left: 6px;
+    color: #d1d5db;
+  }
+}

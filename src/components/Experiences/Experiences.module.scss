@@ -1,0 +1,164 @@
+@import "/src/styles/variables.scss";
+
+.container {
+  height: 100%;
+  max-width: $breakpoint-lg;
+  margin-inline: auto;
+  padding: 32px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 24px;
+  background: radial-gradient(var(--tertiary), var(--background) 50%);
+  border-bottom: 1px solid var(--tertiary);
+
+  @media (max-width: $breakpoint-md) {
+    padding: 16px !important;
+    margin: 0 !important;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    background: none;
+  }
+
+  .experience {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 80px;
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column-reverse;
+      padding-left: 50px !important;
+
+      .careerDate {
+        align-self: flex-end;
+        border-bottom: 1px solid var(--secondary);
+        margin-bottom: 8px;
+        row-gap: unset !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-bottom: 16px !important;
+        p {
+          padding: 0 !important;
+          margin: 0 !important;
+          border: none !important;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      padding-inline: 8px !important;
+    }
+
+    .careerDate {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      row-gap: 16px;
+      padding-right: 16px;
+      margin-left: 16px;
+
+      :first-child {
+        position: relative;
+        padding: 8px 16px;
+        border: 2px solid var(--secondary);
+        border-radius: 8px;
+        font-style: italic;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 8px;
+          height: 50px;
+          border: 2px solid var(--secondary);
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+          border-left: none;
+          top: 14px;
+          right: -12px;
+        }
+      }
+
+      :nth-child(2) {
+        padding: 8px 16px;
+        border: 2px solid var(--secondary);
+        border-radius: 8px;
+        text-wrap: nowrap;
+      }
+    }
+  }
+
+  .title {
+    margin-top: 8px;
+  }
+
+  .pattern {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+
+    @media (max-width: $breakpoint-md) {
+      top: 60px;
+      width: 120px;
+    }
+    @media (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  .cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-top: 40px;
+
+    @media (max-width: 531px) {
+      > :nth-of-type(1) {
+        background-color: var(--tertiary);
+      }
+      > :nth-of-type(2) {
+        background-color: unset;
+      }
+      > :nth-of-type(3) {
+        background-color: var(--tertiary);
+      }
+      > :nth-of-type(4) {
+        background-color: unset;
+      }
+    }
+
+    @media (min-width: 532px) and (max-width: 781px) {
+      > :nth-of-type(1),
+      > :nth-of-type(4) {
+        background-color: var(--tertiary);
+      }
+    }
+
+    @media (min-width: 782px) and (max-width: 1063px) {
+      > :nth-of-type(1),
+      > :nth-of-type(3),
+      > :nth-of-type(4) {
+        background-color: var(--tertiary);
+      }
+    }
+
+    @media (min-width: 1064px) {
+      > :nth-of-type(odd) {
+        background-color: var(--tertiary) !important;
+      }
+      > :nth-of-type(4) {
+        background-color: unset !important;
+      }
+    }
+  }
+}

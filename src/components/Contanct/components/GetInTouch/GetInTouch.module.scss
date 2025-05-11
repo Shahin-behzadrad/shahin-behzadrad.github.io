@@ -1,0 +1,21 @@
+@import "/src/styles/variables.scss";
+
+.container {
+  height: 100%;
+  flex: 1.5;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  @media (max-width: $breakpoint-md) {
+    padding-inline: 24px;
+    margin-bottom: 16px;
+  }
+
+  .socialMedia {
+    @media (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+}

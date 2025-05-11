@@ -1,0 +1,47 @@
+.container {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: monospace;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  width: clamp(320px, 90%, 720px);
+  font-size: clamp(14px, 3vw, 18px);
+  filter: drop-shadow(0 0 3px #000000);
+  height: clamp(120px, 150px, 260px);
+
+  .cursor {
+    animation: blink 1s steps(2, start) infinite;
+  }
+
+  .threeDotsCorner {
+    display: flex;
+    column-gap: 4px;
+    margin-bottom: 16px;
+    div {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: red;
+      display: flex;
+    }
+
+    :nth-child(1) {
+      background-color: var(--primary-alt);
+    }
+    :nth-child(2) {
+      background-color: var(--text-muted);
+    }
+    :nth-child(3) {
+      background-color: var(--primary);
+    }
+  }
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}

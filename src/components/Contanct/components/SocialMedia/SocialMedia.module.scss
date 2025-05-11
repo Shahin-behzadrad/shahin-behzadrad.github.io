@@ -1,0 +1,20 @@
+@import "/src/styles/variables.scss";
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 16px;
+
+  a {
+    color: var(--foreground);
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      color: var(--primary);
+      scale: 1.05;
+    }
+
+    svg {
+      font-size: 32px;
+    }
+  }
+}
